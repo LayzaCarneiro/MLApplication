@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE1611E72D4CF61700E929DB /* MLXLLM in Frameworks */ = {isa = PBXBuildFile; productRef = AE1611E62D4CF61700E929DB /* MLXLLM */; };
+		AE1611E92D4CF61700E929DB /* MLXLMCommon in Frameworks */ = {isa = PBXBuildFile; productRef = AE1611E82D4CF61700E929DB /* MLXLMCommon */; };
+		AE1611EB2D4CF61700E929DB /* MLXMNIST in Frameworks */ = {isa = PBXBuildFile; productRef = AE1611EA2D4CF61700E929DB /* MLXMNIST */; };
+		AE1611ED2D4CF61700E929DB /* MLXVLM in Frameworks */ = {isa = PBXBuildFile; productRef = AE1611EC2D4CF61700E929DB /* MLXVLM */; };
+		AE1611EF2D4CF61700E929DB /* StableDiffusion in Frameworks */ = {isa = PBXBuildFile; productRef = AE1611EE2D4CF61700E929DB /* StableDiffusion */; };
 		AE21813D2D4BA40900CBDA0D /* MLX in Frameworks */ = {isa = PBXBuildFile; productRef = AE21813C2D4BA40900CBDA0D /* MLX */; };
 		AE21813F2D4BA40900CBDA0D /* MLXFFT in Frameworks */ = {isa = PBXBuildFile; productRef = AE21813E2D4BA40900CBDA0D /* MLXFFT */; };
 		AE2181412D4BA40900CBDA0D /* MLXFast in Frameworks */ = {isa = PBXBuildFile; productRef = AE2181402D4BA40900CBDA0D /* MLXFast */; };
@@ -63,9 +68,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE2181472D4BA40900CBDA0D /* MLXOptimizers in Frameworks */,
+				AE1611EF2D4CF61700E929DB /* StableDiffusion in Frameworks */,
 				AE2181412D4BA40900CBDA0D /* MLXFast in Frameworks */,
 				AE2181432D4BA40900CBDA0D /* MLXLinalg in Frameworks */,
+				AE1611ED2D4CF61700E929DB /* MLXVLM in Frameworks */,
 				AE21813D2D4BA40900CBDA0D /* MLX in Frameworks */,
+				AE1611E92D4CF61700E929DB /* MLXLMCommon in Frameworks */,
+				AE1611E72D4CF61700E929DB /* MLXLLM in Frameworks */,
+				AE1611EB2D4CF61700E929DB /* MLXMNIST in Frameworks */,
 				AE2181452D4BA40900CBDA0D /* MLXNN in Frameworks */,
 				AE21813F2D4BA40900CBDA0D /* MLXFFT in Frameworks */,
 				AE2181492D4BA40900CBDA0D /* MLXRandom in Frameworks */,
@@ -136,6 +146,11 @@
 				AE2181442D4BA40900CBDA0D /* MLXNN */,
 				AE2181462D4BA40900CBDA0D /* MLXOptimizers */,
 				AE2181482D4BA40900CBDA0D /* MLXRandom */,
+				AE1611E62D4CF61700E929DB /* MLXLLM */,
+				AE1611E82D4CF61700E929DB /* MLXLMCommon */,
+				AE1611EA2D4CF61700E929DB /* MLXMNIST */,
+				AE1611EC2D4CF61700E929DB /* MLXVLM */,
+				AE1611EE2D4CF61700E929DB /* StableDiffusion */,
 			);
 			productName = MLChallenge;
 			productReference = AE2181062D4B9A9700CBDA0D /* MLChallenge.app */;
@@ -221,6 +236,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				AE21813B2D4BA40900CBDA0D /* XCRemoteSwiftPackageReference "mlx-swift" */,
+				AE1611E52D4CF61700E929DB /* XCRemoteSwiftPackageReference "mlx-swift-examples" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = AE2181072D4B9A9700CBDA0D /* Products */;
@@ -587,6 +603,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AE1611E52D4CF61700E929DB /* XCRemoteSwiftPackageReference "mlx-swift-examples" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ml-explore/mlx-swift-examples";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.21.2;
+			};
+		};
 		AE21813B2D4BA40900CBDA0D /* XCRemoteSwiftPackageReference "mlx-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ml-explore/mlx-swift";
@@ -598,6 +622,31 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AE1611E62D4CF61700E929DB /* MLXLLM */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE1611E52D4CF61700E929DB /* XCRemoteSwiftPackageReference "mlx-swift-examples" */;
+			productName = MLXLLM;
+		};
+		AE1611E82D4CF61700E929DB /* MLXLMCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE1611E52D4CF61700E929DB /* XCRemoteSwiftPackageReference "mlx-swift-examples" */;
+			productName = MLXLMCommon;
+		};
+		AE1611EA2D4CF61700E929DB /* MLXMNIST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE1611E52D4CF61700E929DB /* XCRemoteSwiftPackageReference "mlx-swift-examples" */;
+			productName = MLXMNIST;
+		};
+		AE1611EC2D4CF61700E929DB /* MLXVLM */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE1611E52D4CF61700E929DB /* XCRemoteSwiftPackageReference "mlx-swift-examples" */;
+			productName = MLXVLM;
+		};
+		AE1611EE2D4CF61700E929DB /* StableDiffusion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE1611E52D4CF61700E929DB /* XCRemoteSwiftPackageReference "mlx-swift-examples" */;
+			productName = StableDiffusion;
+		};
 		AE21813C2D4BA40900CBDA0D /* MLX */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AE21813B2D4BA40900CBDA0D /* XCRemoteSwiftPackageReference "mlx-swift" */;
