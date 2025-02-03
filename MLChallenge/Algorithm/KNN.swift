@@ -187,13 +187,14 @@ func KNN() {
         [5.7, 2.8, 4.1, 1.3], // Iris-versicolor
         [6.2, 3.4, 5.4, 2.3], // Iris-virginica
         [5.9, 3.0, 5.1, 1.8], // Iris-virginica
+        [5.1, 3.5, 1.4, 0.2], // Iris-setosa
     ]
     
     for _test in tests {
         let test = MLXArray(converting: _test)
-        
+                
         let distances = norm(test - train, axes: [1])
-        
+                
         let k = 5
         
         let kNearestIndices = argSort(distances)[..<k]
